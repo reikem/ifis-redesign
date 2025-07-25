@@ -1,69 +1,204 @@
-# React + TypeScript + Vite
+# IFIS – Internet Flight Information Service (Rediseño NO OFICIAL)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **⚠️ Aviso importante**  
+> Este proyecto **NO es la página oficial de IFIS-DGAC Chile**. Es una **recreación/prototipo educativo** para practicar **Vite, React, Tailwind CSS y shadcn/ui**. No consume ni expone datos reales.
 
-Currently, two official plugins are available:
+---
+## 🚀 Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite + React + TypeScript**
+- **Tailwind CSS** (con diseño por *CSS variables* para light/dark)
+- **shadcn/ui** + **lucide-react**
+- **i18n simple con React Context** (ES, EN, PT, FR, ZH, JA)
+- **ThemeProvider** (light / dark / system)
+- **Twitter Cards + Open Graph** en `index.html`
 
-## Expanding the ESLint configuration
+---
+## 📦 Requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Node.js ≥ 18**
+- **pnpm / npm / yarn** (elige tu gestor)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Instalación
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clonar
+git clone https://github.com/tu-usuario/ifis-redesign.git
+cd ifis-redesign
+
+# Instalar deps
+npm install
+# o pnpm i / yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Correr en desarrollo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### Build de producción
+
+```bash
+npm run build
+npm run preview
+```
+
+### Lint & format (opcional, si lo configuraste)
+
+```bash
+npm run lint
+npm run format
+```
+
+---
+
+## 🗂️ Estructura del proyecto
+
+```
+src/
+  App.tsx
+  main.tsx
+  styles/
+    global.css
+  lib/
+    theme-provider.tsx
+    ThemeToggle.tsx
+  i18n/
+    language-provider.tsx
+  pages/
+    IFISHomePage.tsx
+  data/
+    mock.ts
+  types/
+    index.ts
+  components/
+    pagination.tsx
+    hero-carousel.tsx
+    loading-video.tsx
+    LanguageSelector.tsx
+    AirportCard.tsx
+    ProcedureCard.tsx
+    NoticeCard.tsx
+    WeatherCard.tsx
+    ui/               // componentes shadcn/ui
+      button.tsx
+      input.tsx
+      card.tsx
+      ...
+assets/
+  logo.svg
+index.html
+tailwind.config.ts
+```
+
+---## 📦 Requisitos
+
+- **Node.js ≥ 18**
+- **pnpm / npm / yarn** (elige tu gestor)
+
+---
+
+## 🛠️ Instalación
+
+```bash
+# Clonar
+git clone https://github.com/tu-usuario/ifis-redesign.git
+cd ifis-redesign
+
+# Instalar deps
+npm install
+# o pnpm i / yarn
+```
+
+### Correr en desarrollo
+
+```bash
+npm run dev
+```
+
+### Build de producción
+
+```bash
+npm run build
+npm run preview
+```
+
+### Lint & format (opcional, si lo configuraste)
+
+```bash
+npm run lint
+npm run format
+```
+
+---
+
+## 🗂️ Estructura del proyecto
+
+```
+src/
+  App.tsx
+  main.tsx
+  styles/
+    global.css
+  lib/
+    theme-provider.tsx
+    ThemeToggle.tsx
+  i18n/
+    language-provider.tsx
+  pages/
+    IFISHomePage.tsx
+  data/
+    mock.ts
+  types/
+    index.ts
+  components/
+    pagination.tsx
+    hero-carousel.tsx
+    loading-video.tsx
+    LanguageSelector.tsx
+    AirportCard.tsx
+    ProcedureCard.tsx
+    NoticeCard.tsx
+    WeatherCard.tsx
+    ui/               // componentes shadcn/ui
+      button.tsx
+      input.tsx
+      card.tsx
+      ...
+assets/
+  logo.svg
+index.html
+tailwind.config.ts
+```
+
+---
+## 🌓 Tema (light/dark/system)
+
+- `ThemeProvider` añade/quita la clase `.dark` al `<html>`.
+- Persistencia en `localStorage`.
+- Botón `ThemeToggle` usando `lucide-react`.
+
+---
+## 🤝 Contribuir
+
+1. Haz un fork
+2. Crea una rama: `git checkout -b feat/mi-feature`
+3. Commit: `git commit -m "feat: agrega X"`
+4. Push: `git push origin feat/mi-feature`
+5. Abre un PR
+
+---
+
+## 📄 Licencia
+
+MIT — Usa este código como quieras, **respetando el aviso de NO OFICIALIDAD**.
+
+---
+
+## 🙌 Créditos
+
+- **DGAC Chile**: el nombre y referencia aparecen solo con fines educativos.
+- **Este prototipo no reemplaza, representa ni utiliza recursos oficiales**.

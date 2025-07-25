@@ -12,8 +12,8 @@ import {
 
   import type { Airport } from "../type/index.ts"
   
-  import { Badge } from "../components/ui/badge"
-  import { Button } from "../components/ui/button"
+  import { Badge } from "../components/ui/badge.tsx"
+  import { Button } from "../components/ui/button.tsx"
   import {
     Dialog,
     DialogContent,
@@ -21,14 +21,14 @@ import {
     DialogTitle,
     DialogTrigger,
     DialogDescription,
-  } from "../components/ui/dialog"
+  } from "../components/ui/dialog.tsx"
   import {
     Card,
     CardContent,
     CardDescription,
     CardHeader,
     CardTitle,
-  } from "../components/ui/card"
+  } from "../components/ui/card.tsx"
 import { useLanguage } from "../lib/LanguageProvider.tsx"
   
   export function AirportCard({

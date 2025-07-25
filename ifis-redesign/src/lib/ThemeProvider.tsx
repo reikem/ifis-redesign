@@ -34,7 +34,7 @@ import  {
       return saved ?? defaultTheme
     })
   
-    // Aplica inmediatamente el tema al montar y cada vez que cambia.
+
     useEffect(() => {
       applyTheme(theme)
       if (theme === "system") {
@@ -43,8 +43,7 @@ import  {
         localStorage.setItem("theme", theme)
       }
     }, [theme])
-  
-    // Si el usuario elige "system", reaccionamos a cambios del SO.
+
     useEffect(() => {
       if (theme !== "system") return
       const mql = window.matchMedia("(prefers-color-scheme: dark)")

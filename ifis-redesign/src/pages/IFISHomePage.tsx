@@ -46,7 +46,7 @@ export default function IFISHomePage() {
 
     return (
         <div className="min-h-screen w-screen overflow-x-hidden bg-slate-50 dark:bg-slate-900">
-  
+
             <div className="bg-red-600 text-white py-2 px-4 text-center text-sm font-medium">
                 {t("disclaimer.warning")}
             </div>
@@ -55,7 +55,7 @@ export default function IFISHomePage() {
             <header className="w-full bg-white dark:bg-slate-800 border-b-2 border-blue-600 shadow-sm">
                 <div className="w-full px-4 py-4">
                     <div className="flex items-center justify-between">
-                       
+
                         <div className="flex items-center space-x-4">
                             <img src={Logo} alt="Escudo de Chile" className="h-16 w-16" />
                             <div>

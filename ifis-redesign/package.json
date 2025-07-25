@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "cp dist/index.html dist/404.html" 
+  
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",

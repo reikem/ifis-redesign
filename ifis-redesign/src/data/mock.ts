@@ -1,4 +1,16 @@
 import type { Procedure, Airport, Notice, WeatherReport } from "../type/index.ts"
+import scl from "../assets/airports/scl.webp"
+import vp from "../assets/airports/vp.webp"
+import ie from "../assets/airports/ie.webp"
+import se from "../assets/airports/se.webp"
+import fa from "../assets/airports/fa.webp"
+import da from "../assets/airports/da.webp"
+import tc from "../assets/airports/tc.webp"
+import te from "../assets/airports/te.webp"
+
+const airportImages = [scl, vp, ie, se, fa, da, tc, te] as const
+
+
 
 export const procedures: Procedure[] = Array.from({ length: 25 }, (_, i) => ({
   id: i + 1,
@@ -26,7 +38,7 @@ export const airports: Airport[] = Array.from({ length: 20 }, (_, i) => ({
   elevation: `${Math.floor(Math.random() * 1000) + 50}m`,
   runways: String(Math.floor(Math.random() * 3) + 1),
   status: "operational",
-  image: `/../src/assets/airports/${["scl.webp", "vp.webp", "ie.webp", "se.webp", "fa.webp", "da.webp", "tc.webp", "te.webp"][i % 8]}`,
+  image: airportImages[i % airportImages.length],
   details: {
     coordinates: `${Math.floor(Math.random() * 90)}°S ${Math.floor(Math.random() * 180)}°W`,
     frequency: `${118 + Math.random() * 18}.${Math.floor(Math.random() * 100)}`,

@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "ifis-redesign",
+  base: "/ifis-redesign/",
   plugins: [react(),],
   resolve: {
     alias: {

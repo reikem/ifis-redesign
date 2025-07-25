@@ -30,7 +30,7 @@ export function HeroCarrusel(){
     }
     return(
         <section className="relative bg-slate-900 text-white overflow-hidden h-[600px]">
-        {/* Slides */}
+
         {Slides.map((slide, index) => (
           <div
             key={slide.id}

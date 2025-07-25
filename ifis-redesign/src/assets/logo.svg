@@ -1,0 +1,146 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 320 500"
+  width="320"
+  height="500"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Escudo estilizado (SVG corregido)</title>
+  <desc id="desc">
+    Versión con textos laterales y de la cinta correctamente centrados.
+  </desc>
+
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9a441"/>
+      <stop offset="100%" stop-color="#b97b1b"/>
+    </linearGradient>
+
+    <clipPath id="shield-clip">
+      <path d="M40,90 h240 v240 a30,30 0 0 1 -30,30 h-180 a30,30 0 0 1 -30,-30 z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Corona -->
+  <g id="crown">
+    <path
+      d="M60,70
+         L90,20 L120,70
+         L160,10 L200,70
+         L230,20 L260,70
+         Q260,90 240,95
+         H80 Q60,90 60,70 Z"
+      fill="url(#gold)"
+      stroke="#8a5e1b"
+      stroke-width="4"
+    />
+    <rect x="80" y="95" width="160" height="20" fill="url(#gold)" stroke="#8a5e1b" stroke-width="4" />
+  </g>
+
+  <!-- Marco -->
+  <g id="frame">
+    <path
+      d="M30,80 h260 v260 a40,40 0 0 1 -40,40 h-180 a40,40 0 0 1 -40,-40 z"
+      fill="#ffffff"
+      stroke="#444"
+      stroke-width="6"
+    />
+  </g>
+
+  <!-- Escudo -->
+  <g id="shield">
+    <path
+      d="M40,90 h240 v240 a30,30 0 0 1 -30,30 h-180 a30,30 0 0 1 -30,-30 z"
+      fill="#0c4da2"
+      stroke="#003b7a"
+      stroke-width="4"
+    />
+  </g>
+
+  <!-- Contenido del escudo -->
+  <g id="shield-content" clip-path="url(#shield-clip)">
+    <!-- Globo -->
+    <circle cx="85" cy="285" r="55" fill="none" stroke="#ffffff" stroke-width="3" />
+    <path d="M85,230 v110 M60,245 a55,55 0 0 0 50,0 M60,325 a55,55 0 0 1 50,0"
+          stroke="#ffffff" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M40,285 h90" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.7"/>
+
+    <!-- Trazo curvo -->
+    <path
+      d="M60,300
+         C180,200 210,160 245,120
+         C255,110 270,110 280,120
+         C250,150 220,190 140,260
+         C120,280 100,295 60,300 Z"
+      fill="#27a6ff"
+      opacity="0.9"
+    />
+
+    <!-- Estrellas -->
+    <g fill="#ffffff">
+      <circle cx="235" cy="130" r="6" />
+      <circle cx="255" cy="150" r="5" />
+      <circle cx="215" cy="160" r="5" />
+      <circle cx="245" cy="180" r="4" />
+    </g>
+  </g>
+
+  <!-- Textos laterales centrados -->
+  <!-- Centrado vertical respecto a la altura útil del escudo: (90 .. 360) => centro ~225 -->
+  <g id="left-text">
+    <text
+      x="22"
+      y="225"
+      transform="rotate(-90 22 225)"
+      font-family="Inter, sans-serif"
+      font-size="14"
+      fill="#333"
+      text-anchor="middle"
+      dominant-baseline="middle"
+    >
+      DIRECCIÓN GENERAL
+    </text>
+  </g>
+
+  <g id="right-text">
+    <text
+      x="298"
+      y="225"
+      transform="rotate(90 298 225)"
+      font-family="Inter, sans-serif"
+      font-size="14"
+      fill="#333"
+      text-anchor="middle"
+      dominant-baseline="middle"
+    >
+      DE AERONÁUTICA CIVIL
+    </text>
+  </g>
+
+  <!-- Faja inferior -->
+  <g id="ribbon">
+    <path
+      d="M60,390
+         c40,20 160,20 200,0
+         l20,40
+         c-80,30 -180,30 -240,0
+         z"
+      fill="#ffffff"
+      stroke="#444"
+      stroke-width="4"
+    />
+    <!-- Centrado en el ancho total (320) y en el alto aproximado de la faja (390–450) -->
+    <text
+      x="160"
+      y="418"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      font-family="Inter, sans-serif"
+      font-size="16"
+      fill="#333"
+    >
+      NEC RECITATE
+    </text>
+  </g>
+</svg>

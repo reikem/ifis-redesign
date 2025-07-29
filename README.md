@@ -77,3 +77,4 @@ MIT — Usa este código como quieras, **respetando el aviso de NO OFICIALIDAD**
 
 - **DGAC Chile**: el nombre y referencia aparecen solo con fines educativos.
 - **Este prototipo no reemplaza, representa ni utiliza recursos oficiales**.
+- **Link de acceso**: https://reikem.github.io/ifis-redesign/

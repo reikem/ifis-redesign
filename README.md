@@ -1,4 +1,4 @@
-![Pantalla principal](src/assets/proyecto.webps)
+![Pantalla principal](src/assets/proyecto.webp)
 
 # IFIS – Internet Flight Information Service (Rediseño NO OFICIAL)
 

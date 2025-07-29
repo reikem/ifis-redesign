@@ -1,15 +1,18 @@
+![Pantalla principal](src/assets/proyecto.webps)
+
 # IFIS – Internet Flight Information Service (Rediseño NO OFICIAL)
 
 > **⚠️ Aviso importante**  
 > Este proyecto **NO es la página oficial de IFIS-DGAC Chile**. Es una **recreación/prototipo educativo** para practicar **Vite, React, Tailwind CSS y shadcn/ui**. No consume ni expone datos reales.
 
 ---
+
 ## 🚀 Stack
 
 - **Vite + React + TypeScript**
 - **Tailwind CSS** (con diseño por *CSS variables* para light/dark)
 - **shadcn/ui** + **lucide-react**
-- **i18n simple con React Context** (ES, EN, PT, FR, ZH, JA)
+- **selector de idioma simple con React Context** (ES, EN, PT, FR, ZH, JA)
 - **ThemeProvider** (light / dark / system)
 - **Twitter Cards + Open Graph** en `index.html`
 
@@ -25,7 +28,7 @@
 
 ```bash
 # Clonar
-git clone https://github.com/tu-usuario/ifis-redesign.git
+git clone https://github.com/reikem/ifis-redesign.git
 cd ifis-redesign
 
 # Instalar deps
@@ -45,14 +48,6 @@ npm run dev
 npm run build
 npm run preview
 ```
-
-### Lint & format (opcional, si lo configuraste)
-
-```bash
-npm run lint
-npm run format
-```
-
 ---
 
 ## 🌓 Tema (light/dark/system)
